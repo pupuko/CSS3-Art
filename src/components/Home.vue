@@ -1,6 +1,6 @@
 <template>
     <div>
-        hello!
+        hello!啊啊啊
     </div>
 </template>
 <script>

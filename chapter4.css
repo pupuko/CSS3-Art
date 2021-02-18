@@ -1,0 +1,284 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.e1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16em;
+  height: 12em;
+  background: skyblue;
+  border-radius: 10px;
+}
+
+.e1 div {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  font-size: 50px;
+  color: whitesmoke;
+  background: currentColor;
+  border-radius: 100% 100% 0 0;
+}
+
+.e1 div::before,
+.e1 div::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  bottom: 0;
+}
+
+.e1 div::before {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 100% 100% 0 100%;
+  left: -30%;
+}
+
+.e1 div::after {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 100% 100% 100% 0;
+  right: -37%;
+}
+
+.e2 div {
+  position: relative;
+  width: 45em;
+  height: 6em;
+  font-size: 10px;
+  background: linear-gradient(peru 45%, sandybrown 45%);
+}
+
+.e2 div::before,
+.e2 div::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  background-image: linear-gradient(
+    to right,
+    darkslategray 1em,
+    transparent 1em
+  );
+  background-repeat: repeat-x;
+}
+
+.e2 div::before {
+  background-size: 4em 2em;
+  left: 1em;
+  width: 44em;
+}
+
+.e2 div::after {
+  background-size: 4em 1em;
+  left: 3em;
+  width: 42em;
+}
+
+.e3 div {
+  width: 10em;
+  height: 5em;
+  background-image: linear-gradient(
+    to right,
+    orangered,
+    orange,
+    gold,
+    lightgreen,
+    cyan
+  );
+}
+
+.e4 div {
+  width: 10em;
+  height: 5em;
+  background-image: linear-gradient(
+    30deg,
+    orangered 10%,
+    orange 10%,
+    orange 20%,
+    gold 20%,
+    gold 30%,
+    lightgreen 30%,
+    lightgreen 40%,
+    cyan 40%
+  );
+}
+
+.e5 {
+  background: lightyellow;
+}
+
+.e5 div {
+  width: 32em;
+  height: 0.5em;
+  font-size: 10px;
+  background-image: linear-gradient(
+    to right,
+    black 0,
+    black 4em,
+    transparent 4em,
+    transparent 5em,
+    black 5em,
+    black 7em,
+    transparent 7em,
+    transparent 8em
+  );
+  background-size: 8em;
+}
+
+.e6 div {
+  width: 10em;
+  height: 10em;
+  background-image: radial-gradient(orangered, orange, gold, lightgreen, cyan);
+}
+
+.e7 div {
+  width: 15em;
+  height: 10em;
+  background-image: radial-gradient(
+    circle,
+    orangered,
+    orangered 15%,
+    orange 15%,
+    orange 30%,
+    gold 30%,
+    gold 45%,
+    lightgreen 45%,
+    lightgreen 60%,
+    cyan 60%
+  );
+}
+
+.e8 div {
+  width: 15em;
+  height: 10em;
+  background-image: radial-gradient(
+    orangered,
+    orangered 15%,
+    orange 15%,
+    orange 30%,
+    gold 30%,
+    gold 45%,
+    lightgreen 45%,
+    lightgreen 60%,
+    cyan 60%
+  );
+}
+
+.e9 div {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  font-size: 20px;
+  background: black;
+  border-radius: 50%;
+  background-image: linear-gradient(
+      90deg,
+      transparent 49.75%,
+      darkgreen 49.75%,
+      darkgreen 50.25%,
+      transparent 50.25%
+    ),
+    linear-gradient(
+      transparent 49.75%,
+      darkgreen 49.75%,
+      darkgreen 50.25%,
+      transparent 50.25%
+    ),
+    repeating-radial-gradient(
+      transparent 0,
+      transparent 0.95em,
+      darkgreen 0.95em,
+      darkgreen 1em
+    );
+}
+.e9 div::before {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 4em;
+  height: 4em;
+  border-radius: 100% 0 0 0;
+  background-image: linear-gradient(
+    45deg,
+    transparent 50%,
+    rgba(0, 192, 0, 1) 100%
+  );
+	animation: scaning 5s linear infinite;
+	transform-origin: right bottom;
+}
+@keyframes scaning {
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+.e10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 15em;
+  background: rgb(3, 175, 175);
+}
+
+.e10 div {
+  position: relative;
+  width: 21em;
+  height: 16em;
+  font-size: 10px;
+  background-color: white;
+  border: 0.5em solid #333;
+  border-radius: 11em 11em 11em 11em / 11em 11em 6em 6em;
+  background-image: radial-gradient(
+      ellipse at 50% 60%,
+      #333 1.2em,
+      transparent 1.2em
+    ),
+    radial-gradient(ellipse at 50% 80%, #333 0.6em, transparent 0.6em);
+  border-bottom-width: 1em;
+  box-shadow: inset 1em -1em 0 #eee;
+}
+
+.e10 div::before,
+.e10 div::after {
+  content: "";
+  position: absolute;
+  top: 5.5em;
+  width: 7em;
+  height: 4em;
+  background: #333;
+  border-radius: 50% 50% 45% 42%;
+}
+
+.e10 div::before {
+  left: 2.9em;
+  transform: rotate(-45deg);
+  background-image: radial-gradient(
+      circle at 5.1em 2em,
+      white 0.3em,
+      transparent 0.3em
+    ),
+    radial-gradient(circle at 4.6em 2em, #333 0.7em, transparent 0.7em),
+    radial-gradient(circle at 4.5em 2em, white 1em, transparent 1em);
+  box-shadow: 1em -7.2em 0 -0.4em #333;
+}
+
+.e10 div::after {
+  right: 2.9em;
+  transform: rotate(45deg);
+  background-image: radial-gradient(
+      circle at 2.4em 1.5em,
+      white 0.3em,
+      transparent 0.3em
+    ),
+    radial-gradient(circle at 2.4em 2em, #333 0.7em, transparent 0.7em),
+    radial-gradient(circle at 2.5em 2em, white 1em, transparent 1em);
+  box-shadow: -1em -7.2em 0 -0.4em #333;
+}

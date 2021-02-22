@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.e1 {
+  display: flex;
+  justify-content: space-between;
+  width: 20em;
+  height: 20em;
+}
+
+.e1 div {
+  width: 3em;
+  background: linear-gradient(red, yellow, green);
+}
+
+.e1 div:nth-child(1) {
+  clip-path: inset(55% 0 0 0);
+}
+
+.e1 div:nth-child(2) {
+  clip-path: inset(20% 0 0 0);
+}
+
+.e1 div:nth-child(3) {
+  clip-path: inset(38% 0 0 0);
+}
+
+.e1 div:nth-child(4) {
+  clip-path: inset(80% 0 0 0);
+}
+
+.e1 div:nth-child(5) {
+  clip-path: inset(23% 0 0 0);
+}
+
+.e2 div {
+  width: 10em;
+  height: 10em;
+  background: lightgreen;
+  clip-path: circle(8em at 0% 50%);
+}
+
+.e3 div {
+  width: 10em;
+  height: 10em;
+  background: lightpink;
+  clip-path: ellipse(5em 10em at 50% 100%);
+}
+
+.e4 div {
+  width: 10em;
+  height: 10em;
+  background: lightskyblue;
+  clip-path: polygon(5em 1em, 9em 9em, 1em 9em);
+}
+
+.e5 div {
+  width: 10em;
+  height: 10em;
+  background: lightsteelblue;
+  clip-path: polygon(0 3em, 6em 3em, 6em 0, 10em 5em, 6em 10em, 6em 7em, 0em 7em);
+}
+
+.e6 {
+  display: flex;
+  justify-content: center;
+}
+
+.e6 div {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin: 0.5em;
+  background-image: linear-gradient(135deg, pink 50%, lightgreen 50%);
+}
+
+.e6 div:nth-child(2) {
+  filter: opacity(0.5);
+}
+
+.e6 div:nth-child(3) {
+  filter: blur(2px);
+}
+
+.e6 div:nth-child(4) {
+  filter: hue-rotate(-80deg);
+}
+
+.e6 div:nth-child(5) {
+  filter: brightness(1.2);
+}

@@ -210,13 +210,13 @@ body {
     transparent 50%,
     rgba(0, 192, 0, 1) 100%
   );
-	animation: scaning 5s linear infinite;
-	transform-origin: right bottom;
+  animation: scaning 5s linear infinite;
+  transform-origin: right bottom;
 }
 @keyframes scaning {
-	to {
-		transform: rotate(1turn);
-	}
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .e10 {

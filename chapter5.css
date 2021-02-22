@@ -1,0 +1,216 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.e1 {
+  display: flex;
+  justify-content: center;
+}
+.e1 div {
+  width: 10em;
+  height: 6.5em;
+  margin: 0 2em;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 1em 1em gray;
+}
+.e1 div:nth-child(2) {
+  border-radius: 50%;
+}
+.e1 div:nth-child(3) {
+  box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.3);
+}
+
+.e2 {
+  display: flex;
+  justify-content: center;
+}
+.e2 div {
+  width: 10em;
+  height: 6.5em;
+  margin: 0 2em;
+  border: 1px solid black;
+  background: white;
+}
+.e2 div:nth-child(1) {
+  box-shadow: inset 1em 1em gray;
+}
+.e2 div:nth-child(2) {
+  box-shadow: inset 0 0 1em gray;
+}
+.e2 div:nth-child(3) {
+  box-shadow: inset 0 0 0 1em gray;
+}
+.e2 div:nth-child(4) {
+  background: lightgray;
+  border: 0;
+  box-shadow: inset 0.2em 0.2em 0.5em hsla(0, 0%, 0%, 0.2);
+}
+
+.e3 div {
+  width: 12em;
+  height: 8em;
+  background: lightyellow;
+  border-radius: 1em;
+  border: 0.5em solid burlywood;
+  box-shadow: inset 0.5em 0.5em hsla(0, 0%, 0%, 0.3),
+    0 0.2em 1em hsla(0, 0%, 0%, 0.3);
+  /* border: 0.5em solid rgb(223, 166, 120) */
+}
+
+.e4 div {
+  width: 8em;
+  height: 8em;
+  background: #eee;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5em hsla(19, 56%, 40%, 0.8),
+    0 0 0 0.8em hsla(48, 100%, 93%, 0.8), 0 0 1em 1em hsla(19, 56%, 40%, 0.8);
+}
+
+.e5 div {
+  font-size: 10px;
+  box-sizing: border-box;
+  width: 10em;
+  height: 11em;
+  color: orange;
+  border: 1.5em solid;
+  border-radius: 50%;
+  position: relative;
+  filter: drop-shadow(11em 0);
+}
+.e5 div::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5em;
+  right: -1em;
+  height: 5em;
+  width: 2.5em;
+  background: currentColor;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+
+.e6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22em;
+  height: 14em;
+  background: seagreen;
+  border-radius: 10px;
+}
+.e6 div {
+  position: relative;
+  width: 9em;
+  height: 9em;
+  background: white;
+  border: 0.3em solid darkslategray;
+  border-radius: 0.5em;
+  background-image: linear-gradient(to bottom, coral 2em, white 2em);
+  transform: rotate(15deg);
+}
+.e6 div::before {
+  content: "";
+  position: absolute;
+  top: -0.8em;
+  left: 1em;
+  height: 1.4em;
+  width: 1em;
+  border-radius: 100% 100% 50% 50%;
+  background: sandybrown;
+  box-shadow: 6em 0 sandybrown, 0 0 0 0.3em darkslategray,
+    6em 0 0 0.3em darkslategray;
+}
+.e6 div::after {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  width: 1em;
+  height: 1em;
+  color: lightgray;
+  background: currentColor;
+  box-shadow: 2em 0, 4em 0, 6em 0, 0 2em, 2em 2em, 4em 2em, 6em 2em, 0 4em,
+    2em 4em, 4em 4em, 6em 4em;
+}
+.e7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22em;
+  height: 14em;
+  background: skyblue;
+  border-radius: 0.5em;
+}
+.e7 .window {
+  position: relative;
+  height: 10em;
+  width: 7em;
+  background: gainsboro;
+  border-radius: 1.5em;
+  overflow: hidden;
+  box-shadow: inset 0 0 0.4em hsla(0, 0%, 0%, 0.2), 0 0 0 0.1em gray,
+    0 0 0 1.1em whitesmoke, 0 0 0 1.2em gray,
+    0 0.5em 1em 2em hsla(0, 0%, 0%, 0.1);
+}
+.e7 .window .curtain {
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  width: inherit;
+  height: 30%;
+  background: whitesmoke;
+  border-radius: 1.5em;
+  box-shadow: 0 0 0 0.1em gray, 0 0 1.5em hsla(0, 0%, 0%, 0.4);
+}
+.e7 .window .curtain::before {
+  content: "";
+  position: absolute;
+  bottom: 0.3em;
+  left: 30%;
+  width: 40%;
+  height: 0.4em;
+  background: gray;
+  border-radius: 0.2em;
+}
+.e7 .window .outside {
+  position: relative;
+  left: 1em;
+  top: 1em;
+  width: 5em;
+  height: 8em;
+  background: deepskyblue;
+  border-radius: 1em;
+  overflow: hidden;
+}
+.e7 .window .outside .cloud {
+  position: absolute;
+  width: 2.5em;
+  height: 1em;
+  color: white;
+  background: currentColor;
+  top: 20%;
+  border-radius: 1em;
+  box-shadow: 3em 2em, 1.5em 4em;
+}
+.e7 .window .outside .cloud::before,
+.e7 .window .outside .cloud::after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 3em 2em, 1.5em 4em;
+}
+.e7 .window .outside .cloud::before {
+  top: -0.5em;
+  left: 0.5em;
+}
+.e7 .window .outside .cloud::after {
+  top: -0.25em;
+  right: 0.25em;
+}

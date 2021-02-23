@@ -1,0 +1,344 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.e1 {
+  --color1: deepskyblue;
+  --color2: steelblue;
+  --color3: royalblue;
+  --color4: dodgerblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 20em;
+  font-size: 5px;
+  border-radius: 1em;
+  transform: rotate(45deg);
+}
+
+.e1 div {
+  border-width: 5em;
+  border-style: solid;
+  border-color: var(--color1) var(--color2) var(--color3) var(--color4);
+}
+
+.e1 div:first-child {
+  border-color: transparent var(--color2) var(--color3) transparent;
+}
+
+.e2 {
+  font-size: 30px;
+  width: 2em;
+  height: 4em;
+  background: radial-gradient(circle at 35% 40%, lightblue 0.1em, transparent 0.4em), radial-gradient(circle at 65% 60%, lightblue 0.1em, transparent 0.3em), radial-gradient(circle at 45% 80%, lightblue 0.1em, transparent 0.2em), linear-gradient(to bottom, lightskyblue 25%, transparent 25%), dodgerblue;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+}
+
+.e3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
+  height: 12em;
+  background: lightgrey;
+}
+
+.e3 div {
+  position: relative;
+  width: 8em;
+  height: 8em;
+  background: white;
+  border-radius: 50% / 30% 60%;
+}
+
+.e3 div::before {
+  content: "";
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: orange;
+}
+
+.e4 {
+  height: 10em;
+  margin-top: 3em;
+}
+
+.e4 div {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: lightyellow;
+  box-shadow: 0 0 0 1em gold, 0 0 0 2em orange, 0 0 0 3em orangered;
+}
+
+.e5 {
+  width: 35em;
+  font-size: 10px;
+}
+
+.e5 .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  counter-reset: n;
+}
+
+.e5 .row div {
+  position: relative;
+  height: 3em;
+  width: 3em;
+  background: royalblue;
+  border-radius: 50%;
+  counter-increment: n;
+}
+
+.e5 .row div::before {
+  content: counter(n);
+  position: absolute;
+  font-size: 1.5em;
+  width: inherit;
+  line-height: 2em;
+  text-align: center;
+  color: white;
+}
+
+.e5 .row2 {
+  counter-reset: n 10;
+}
+
+.e5 .row2 div {
+  background: green;
+}
+
+.e5 .row3 div {
+  counter-increment: n 3;
+  background: orange;
+}
+
+.e5 .row4 {
+  counter-reset: n 40;
+}
+
+.e5 .row4 div {
+  counter-increment: n -2;
+  background: hotpink;
+}
+
+.e5 .row5 div::before {
+  content: counter(n, upper-roman);
+}
+
+.e5 .row6 div::before {
+  content: counter(n, trad-chinese-formal);
+}
+
+.e5 .row7 div::before {
+  content: counter(n, trad-chinese-informal);
+}
+
+.e5 .row8 div::before {
+  content: counter(n, hiragana);
+}
+
+.e5 .row9 div::before {
+  content: counter(n, korean-hangul-formal);
+}
+
+.e6 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  width: 50em;
+  font-size: 10px;
+  counter-reset: n;
+}
+
+.e6 div {
+  position: relative;
+  height: 5em;
+  background: lightyellow;
+  border-radius: 1em;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  counter-increment: n;
+}
+
+.e6 div::before {
+  content: counter(n, upper-alpha);
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  font-size: 30px;
+  color: indianred;
+}
+
+.e6 div::after {
+  content: counter(n, lower-alpha);
+  position: absolute;
+  left: 70%;
+  top: 35%;
+  font-size: 20px;
+  color: orange;
+}
+
+.e7 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  animation: rotating 3s linear infinite;
+}
+
+.e7 div {
+  --d: calc(10em - (var(--n) - 1) * 1em);
+  position: absolute;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 50%;
+}
+
+.e7 div:nth-child(odd) {
+  background: orangered;
+}
+
+.e7 div:nth-child(even) {
+  background: gold;
+}
+
+.e7 div:nth-child(1) {
+  --n: 1;
+}
+
+.e7 div:nth-child(2) {
+  --n: 2;
+}
+
+.e7 div:nth-child(3) {
+  --n: 3;
+}
+
+.e7 div:nth-child(4) {
+  --n: 4;
+}
+
+.e7 div:nth-child(5) {
+  --n: 5;
+}
+
+.e7 div:nth-child(6) {
+  --n: 6;
+}
+
+.e7 div:nth-child(7) {
+  --n: 7;
+}
+
+.e7 div:nth-child(8) {
+  --n: 8;
+}
+
+.e7 div:nth-child(9) {
+  --n: 9;
+}
+
+.e7 div:nth-child(10) {
+  --n: 10;
+}
+
+.e7 div:nth-child(n+8) {
+  top: calc((var(--n) - 7) * 1em);
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.e8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100em;
+  height: 70em;
+  font-size: 3px;
+  background: dodgerblue;
+  border-radius: 3em;
+}
+
+.e8 .container {
+  position: relative;
+  width: 52em;
+  height: 50em;
+}
+
+.e8 .container div {
+  position: absolute;
+  left: calc(var(--x) * 1em);
+  top: calc(var(--y) * 1em);
+  border-left: calc(var(--left) * 1em) solid transparent;
+  border-right: calc(var(--right) * 1em) solid transparent;
+  border-bottom: calc(var(--bottom) * 1em) solid;
+  color: white;
+  filter: opacity(0.6);
+  transform: rotate(calc(var(--rotation) * 1deg));
+}
+
+.e8 .container .head {
+  --left: 13;
+  --right: 6;
+  --bottom: 2;
+  --x: 0;
+  --y: 21;
+  --rotation: -5;
+}
+
+.e8 .container .neck {
+  --left: 6;
+  --right: 6;
+  --bottom: 12;
+  --x: 14;
+  --y: 19;
+  --rotation: 75;
+}
+
+.e8 .container .side {
+  --left: 1.5;
+  --right: 11.5;
+  --bottom: 20;
+  --x: 18.8;
+  --y: 15.1;
+  --rotation: 20;
+}
+
+.e8 .container .wing {
+  --left: 18.7;
+  --right: 30;
+  --bottom: 8;
+  --x: 6.7;
+  --y: 9.2;
+  --rotation: -41.9;
+}
+
+.e8 .container .tail {
+  --left: 18.6;
+  --right: 7.7;
+  --bottom: 3.9;
+  --x: 19.6;
+  --y: 38.1;
+  --rotation: -126.5;
+}
+
+.e8 .container .belly {
+  --left: 6.2;
+  --right: 1.8;
+  --bottom: 11.5;
+  --x: 17.5;
+  --y: 27.8;
+  --rotation: -99;
+}

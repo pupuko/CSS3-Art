@@ -92,3 +92,142 @@ body {
 .e6 div:nth-child(5) {
   filter: brightness(1.2);
 }
+
+.e7 {
+  position: relative;
+  height: 10em;
+}
+
+.e7 div {
+  position: absolute;
+  left: calc(50% - 5em);
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background: #660029;
+  border: 3px solid #99003d;
+}
+
+.e7 div:nth-child(2) {
+  transform: scale(0.8);
+  filter: brightness(1.2);
+}
+
+.e7 div:nth-child(3) {
+  transform: scale(0.6);
+  filter: brightness(1.4);
+}
+
+.e7 div:nth-child(4) {
+  transform: scale(0.4);
+  filter: brightness(1.6);
+}
+
+.e7 div:nth-child(5) {
+  transform: scale(0.2);
+  filter: brightness(1.8);
+}
+
+.e8 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20em;
+  height: 11.5em;
+  background: lightyellow;
+}
+
+.e8 div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10em;
+  height: 3em;
+  box-sizing: border-box;
+  border: 0.1em solid dimgray;
+  border-radius: 50%;
+  background: yellow;
+  transform-origin: right;
+}
+
+.e8 div:nth-child(1) {
+  transform: rotate(0deg);
+  filter: hue-rotate(0deg);
+}
+
+.e8 div:nth-child(2) {
+  transform: rotate(20deg);
+  filter: hue-rotate(20deg);
+}
+
+.e8 div:nth-child(3) {
+  transform: rotate(40deg);
+  filter: hue-rotate(40deg);
+}
+
+.e8 div:nth-child(4) {
+  transform: rotate(60deg);
+  filter: hue-rotate(60deg);
+}
+
+.e8 div:nth-child(5) {
+  transform: rotate(80deg);
+  filter: hue-rotate(80deg);
+}
+
+.e8 div:nth-child(6) {
+  transform: rotate(100deg);
+  filter: hue-rotate(100deg);
+}
+
+.e8 div:nth-child(7) {
+  transform: rotate(120deg);
+  filter: hue-rotate(120deg);
+}
+
+.e8 div:nth-child(8) {
+  transform: rotate(140deg);
+  filter: hue-rotate(140deg);
+}
+
+.e8 div:nth-child(9) {
+  transform: rotate(160deg);
+  filter: hue-rotate(160deg);
+}
+
+.e8 div:nth-child(10) {
+  transform: rotate(180deg);
+  filter: hue-rotate(180deg);
+}
+
+.e9 {
+  position: relative;
+  top: -1em;
+  left: -3em;
+  height: 20em;
+  width: 20em;
+  font-size: 10px;
+}
+
+.e9 div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: limegreen;
+  clip-path: polygon(57% 0, 75% 0, 26% 85%, 89.5% 85%, 98.4% 100%, 0 100%);
+}
+
+.e9 div:nth-child(2) {
+  top: 18.3%;
+  left: 43.1%;
+  transform: rotate(120deg);
+  filter: brightness(0.66);
+}
+
+.e9 div:nth-child(3) {
+  top: 46.5%;
+  left: 5.5%;
+  transform: rotate(240deg);
+  filter: brightness(0.33);
+}

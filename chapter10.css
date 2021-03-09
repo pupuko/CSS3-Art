@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure {
+  font-size: 20px;
+  width: 9em;
+  height: 3em;
+  border: 0.3em solid skyblue;
+  border-radius: 2em;
+}
+
+figure div {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: dodgerblue;
+}
+
+.e1 div {
+  animation: shift1 0.5s linear infinite alternate;
+}
+
+@keyframes shift1 {
+  to {
+    transform: translateX(6em);
+  }
+}
+
+.e2 div {
+  transition: transform 1s;
+  transition-delay: 0.5s;
+}
+
+.e2:hover div {
+  transform: translateX(6em);
+  background: lightcoral;
+}
+
+.e3:hover div {
+  animation: shift3 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes shift3 {
+  to {
+    transform: translateX(6em);
+  }
+  0%,
+  100% {
+    background: lightcoral;
+  }
+}
+
+.e4 figure div {
+  animation: shift4 .5s linear infinite alternate;
+}
+
+.e4 figure:nth-child(1) div {
+  animation-delay: -0.1s;
+}
+
+.e4 figure:nth-child(2) div {
+  animation-delay: -0.2s;
+}
+
+.e4 figure:nth-child(3) div {
+  animation-delay: -0.3s;
+}
+
+.e4 figure:nth-child(4) div {
+  animation-delay: -0.4s;
+}
+
+.e4 figure:nth-child(5) div {
+  animation-delay: -0.5s;
+}
+
+@keyframes shift4 {
+  to {
+    transform: translateX(6em);
+  }
+}
+
+.e5 div {
+  animation: shift5 6s cubic-bezier(0.75, -0.5, 0.25, 1.5) infinite;
+}
+
+@keyframes shift5 {
+  33% {
+    transform: translateX(2em);
+  }
+  66% {
+    transform: translateX(4em);
+  }
+  100% {
+    transform: translateX(6em);
+  }
+}
